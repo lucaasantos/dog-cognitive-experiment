@@ -1,0 +1,3 @@
+# No external dependencies are required.
+# Tkinter is part of the Python standard library in most Python distributions.
+

@@ -1,0 +1,101 @@
+{
+    "fear_total": 17.89,
+    "belief_confidence": 97.5,
+    "current_assessment": "There is moderate concern about dogs.",
+    "experiences": [
+        {
+            "text": "a dogs bite my leg",
+            "impact": 0.0,
+            "resulting_fear": 0,
+            "type": "neutral",
+            "detected_events": [],
+            "detected_contexts": [],
+            "detected_breed": "unknown"
+        },
+        {
+            "text": "um cachorro me mordeu",
+            "impact": 0.0,
+            "resulting_fear": 0,
+            "type": "neutral",
+            "detected_events": [],
+            "detected_contexts": [],
+            "detected_breed": "unknown"
+        },
+        {
+            "text": "a dog bite me",
+            "impact": 0.0,
+            "resulting_fear": 0,
+            "type": "neutral",
+            "detected_events": [],
+            "detected_contexts": [],
+            "detected_breed": "unknown"
+        },
+        {
+            "text": "A dog bit me.",
+            "impact": 10.0,
+            "resulting_fear": 10.0,
+            "type": "negative",
+            "detected_events": [
+                "bit"
+            ],
+            "detected_contexts": [],
+            "detected_breed": "unknown"
+        },
+        {
+            "text": "A dog bit me two times",
+            "impact": 10.0,
+            "resulting_fear": 19.8,
+            "type": "negative",
+            "detected_events": [
+                "bit"
+            ],
+            "detected_contexts": [],
+            "detected_breed": "unknown"
+        },
+        {
+            "text": "a dog run around me",
+            "impact": 0.0,
+            "resulting_fear": 19.4,
+            "type": "neutral",
+            "detected_events": [],
+            "detected_contexts": [],
+            "detected_breed": "unknown"
+        },
+        {
+            "text": "A dog licked me.",
+            "impact": 0.0,
+            "resulting_fear": 19.01,
+            "type": "neutral",
+            "detected_events": [],
+            "detected_contexts": [],
+            "detected_breed": "unknown"
+        },
+        {
+            "text": "A dog plays with me",
+            "impact": 0.0,
+            "resulting_fear": 18.63,
+            "type": "neutral",
+            "detected_events": [],
+            "detected_contexts": [],
+            "detected_breed": "unknown"
+        },
+        {
+            "text": "a dog licked me",
+            "impact": 0.0,
+            "resulting_fear": 18.26,
+            "type": "neutral",
+            "detected_events": [],
+            "detected_contexts": [],
+            "detected_breed": "unknown"
+        },
+        {
+            "text": "a dog plays with me",
+            "impact": 0.0,
+            "resulting_fear": 17.89,
+            "type": "neutral",
+            "detected_events": [],
+            "detected_contexts": [],
+            "detected_breed": "unknown"
+        }
+    ]
+}
