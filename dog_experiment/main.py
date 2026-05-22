@@ -1,4 +1,4 @@
-from ui import DogCognitiveApp
+from ui.dashboard import DogCognitiveApp
 
 
 def main():

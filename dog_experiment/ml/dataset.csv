@@ -1,0 +1,164 @@
+text,label
+"the dog tried to bite me",aggressive
+"the dog snapped at my hand",aggressive
+"a large dog lunged toward me",aggressive
+"the dog growled and showed its teeth",aggressive
+"the dog chased me down the street",aggressive
+"the dog jumped at me with angry barking",aggressive
+"a dog bit my jacket",aggressive
+"the dog attacked without warning",aggressive
+"the dog rushed forward and snapped",aggressive
+"the dog kept trying to bite my leg",aggressive
+"an unleashed dog charged at me",aggressive
+"the dog bared its teeth near my face",aggressive
+"the dog growled when I moved closer",aggressive
+"a dog cornered me and barked harshly",aggressive
+"the dog nipped my ankle",aggressive
+"the dog acted hostile near the gate",aggressive
+"the dog rushed out and tried to attack",aggressive
+"the dog pulled hard and snarled at me",aggressive
+"the dog chased my bike aggressively",aggressive
+"the dog lunged and tried to bite",aggressive
+"the dog wagged its tail",friendly
+"the dog approached peacefully",friendly
+"a calm dog let me pet it",friendly
+"the dog sat beside me happily",friendly
+"the dog greeted me with a soft tail wag",friendly
+"the dog followed its owner politely",friendly
+"the dog leaned on me for affection",friendly
+"a labrador came over gently",friendly
+"the dog licked my hand",friendly
+"the dog rested near my feet",friendly
+"the dog looked relaxed around me",friendly
+"the dog came closer in a friendly way",friendly
+"a golden retriever greeted the children",friendly
+"the dog accepted treats gently",friendly
+"the dog walked beside me without tension",friendly
+"the dog stayed soft and affectionate",friendly
+"the dog rolled over for a belly rub",friendly
+"the dog responded kindly to my voice",friendly
+"a neighbor dog greeted me calmly",friendly
+"the dog enjoyed being petted",friendly
+"the dog ignored me",neutral
+"the dog walked past without reacting",neutral
+"a dog slept on the porch",neutral
+"the dog looked at me and continued walking",neutral
+"the dog stayed behind the fence",neutral
+"a dog crossed the road quietly",neutral
+"the dog sniffed the ground nearby",neutral
+"the dog sat in the yard",neutral
+"the dog watched people from a distance",neutral
+"the dog moved away from the path",neutral
+"the dog stood near its owner",neutral
+"a dog was lying under a tree",neutral
+"the dog noticed me but did nothing",neutral
+"the dog waited at the door",neutral
+"the dog walked around the park",neutral
+"the dog passed beside the sidewalk",neutral
+"a dog looked curious but neutral",neutral
+"the dog sniffed a bench",neutral
+"the dog stayed quiet in the car",neutral
+"the dog was present but inactive",neutral
+"the dog barked aggressively",threatening
+"the dog suddenly ran toward me barking loudly",threatening
+"a dog barked from the dark alley",threatening
+"the dog followed me while growling",threatening
+"the dog stood stiff and stared at me",threatening
+"the dog barked behind a broken fence",threatening
+"the dog moved closer with tense posture",threatening
+"the dog snarled from the doorway",threatening
+"a barking dog blocked the path",threatening
+"the dog barked loudly at night",threatening
+"the dog kept circling me and barking",threatening
+"the dog made deep warning sounds",threatening
+"a dog rushed the fence as I passed",threatening
+"the dog barked at every step I took",threatening
+"the dog watched me with raised fur",threatening
+"the dog guarded the gate and barked",threatening
+"the dog growled from under a parked car",threatening
+"a pack of dogs barked as I walked by",threatening
+"the dog approached fast with tense energy",threatening
+"the dog barked sharply when I entered",threatening
+"the dog stayed calm",calm
+"the dog remained relaxed on the leash",calm
+"a quiet dog sat beside its owner",calm
+"the dog breathed slowly and rested",calm
+"the dog watched me without stress",calm
+"the dog lay down peacefully",calm
+"the dog waited patiently outside",calm
+"the dog stayed still and relaxed",calm
+"a dog rested calmly near the door",calm
+"the dog did not react to noise",calm
+"the dog stayed composed around strangers",calm
+"the dog calmly accepted my presence",calm
+"the dog relaxed after hearing my voice",calm
+"the dog sat quietly in the park",calm
+"the dog moved slowly and peacefully",calm
+"the dog was calm even with children nearby",calm
+"the dog settled beside the bench",calm
+"the dog stayed gentle and quiet",calm
+"the dog remained peaceful during the walk",calm
+"the dog quietly watched the room",calm
+"the puppy wanted to play",playful
+"the dog brought me a toy",playful
+"a puppy bounced around happily",playful
+"the dog chased a ball with joy",playful
+"the dog invited me to play fetch",playful
+"the dog jumped playfully near its owner",playful
+"the puppy rolled around on the grass",playful
+"the dog wagged and ran in circles",playful
+"the dog nudged a toy toward me",playful
+"the puppy played gently with my shoe",playful
+"the dog ran after a frisbee",playful
+"the dog made playful little barks",playful
+"the dog bounced back and forth happily",playful
+"the puppy wanted attention and games",playful
+"the dog tugged a rope toy softly",playful
+"the dog splashed around playfully",playful
+"the dog chased leaves in the yard",playful
+"the puppy danced around my feet",playful
+"the dog played with another dog",playful
+"the dog rolled over during play",playful
+"the dog backed away when I approached",defensive
+"the dog growled because it seemed scared",defensive
+"the dog protected its food bowl",defensive
+"the dog barked when I reached for its toy",defensive
+"the dog hid behind its owner",defensive
+"the dog guarded her puppies",defensive
+"the dog retreated and watched carefully",defensive
+"the dog became tense near its bed",defensive
+"the dog warned me to stay away",defensive
+"the dog barked after I startled it",defensive
+"the dog kept distance and growled softly",defensive
+"the dog looked afraid and defensive",defensive
+"the dog shielded its injured paw",defensive
+"the dog snapped when cornered",defensive
+"the dog moved between me and the child",defensive
+"the dog protected the yard entrance",defensive
+"the dog barked because I came too close",defensive
+"the dog stayed low and showed anxiety",defensive
+"the dog growled while backing away",defensive
+"the dog defended its resting place",defensive
+"a friendly dog barked once then wagged its tail",friendly
+"the dog barked but stayed relaxed on its leash",calm
+"the dog ran toward me and then dropped a ball",playful
+"the dog growled softly while hiding behind the sofa",defensive
+"the dog barked loudly but the owner held the leash",threatening
+"the dog sniffed me and walked away",neutral
+"a puppy nipped playfully at my sleeve",playful
+"the dog stared stiffly from a dark doorway",threatening
+"the dog accepted petting after a slow approach",friendly
+"the dog barked when surprised and then calmed down",defensive
+"the dog rushed toward the fence with heavy barking",threatening
+"the dog sat quietly while people walked past",calm
+"the dog pulled toward me with exposed teeth",aggressive
+"the dog circled my bike and barked",threatening
+"the dog watched me from the porch",neutral
+"the dog leaned gently against my leg",friendly
+"the dog guarded its bowl and warned me away",defensive
+"the dog chased the toy instead of me",playful
+"the dog stayed relaxed while I passed",calm
+"the dog ignored the crowd completely",neutral
+A dog play with me,playful
+a dog run through my direction today and go away,aggressive
+today many street dogs played with me,playful

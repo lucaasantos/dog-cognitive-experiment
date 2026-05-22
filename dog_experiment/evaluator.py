@@ -12,10 +12,25 @@ from pathlib import Path
 
 from rules import BREED_MULTIPLIERS, CONTEXT_MODIFIERS, EVENT_WEIGHTS
 
+try:
+    from ml.classifier import classify_experience
+except ImportError:
+    classify_experience = None
+
 
 MEMORY_FILE = Path(__file__).with_name("memory.json")
 EMOTIONAL_DECAY = 0.98
 REFLECTION_WINDOW = 5
+
+ML_LABEL_WEIGHTS = {
+    "aggressive": 6,
+    "threatening": 7,
+    "defensive": 4,
+    "friendly": -5,
+    "playful": -4,
+    "calm": -3,
+    "neutral": 0,
+}
 
 INITIAL_MEMORY = {
     "fear_total": 0,
@@ -127,12 +142,15 @@ def detect_breed(normalized_text):
 
 
 def calculate_impact(text):
-    """Calculate final impact: (events + contexts) * breed multiplier."""
+    """Calculate hybrid impact from rules, context, breed, and ML prediction."""
     normalized_text = normalize_text(text)
     events, event_total = detect_weights(normalized_text, EVENT_WEIGHTS)
     contexts, context_total = detect_weights(normalized_text, CONTEXT_MODIFIERS)
     breed, breed_multiplier = detect_breed(normalized_text)
-    impact = (event_total + context_total) * breed_multiplier
+    rule_impact = (event_total + context_total) * breed_multiplier
+    prediction_label, prediction_confidence = classify_text_with_ml(text)
+    ml_impact = calculate_ml_impact(prediction_label, prediction_confidence)
+    impact = rule_impact + ml_impact
 
     return {
         "detected_events": events,
@@ -141,8 +159,29 @@ def calculate_impact(text):
         "breed_multiplier": breed_multiplier,
         "event_total": event_total,
         "context_total": context_total,
+        "rule_impact": round(rule_impact, 2),
+        "ml_impact": round(ml_impact, 2),
+        "prediction_label": prediction_label,
+        "prediction_confidence": prediction_confidence,
         "impact": round(impact, 2),
     }
+
+
+def classify_text_with_ml(text):
+    """Classify text while keeping the symbolic system usable if ML is unavailable."""
+    if classify_experience is None:
+        return "unavailable", 0.0
+
+    try:
+        return classify_experience(text)
+    except Exception:
+        return "unavailable", 0.0
+
+
+def calculate_ml_impact(prediction_label, prediction_confidence):
+    """Convert a probabilistic ML label into an emotional impact adjustment."""
+    base_weight = ML_LABEL_WEIGHTS.get(prediction_label, 0)
+    return base_weight * prediction_confidence
 
 
 def apply_decay(memory):
@@ -186,11 +225,15 @@ def process_experience(text, memory=None):
     experience = {
         "text": text,
         "impact": impact,
+        "rule_impact": result["rule_impact"],
+        "ml_impact": result["ml_impact"],
         "resulting_fear": fear_total,
         "type": classify_impact(impact),
         "detected_events": result["detected_events"],
         "detected_contexts": result["detected_contexts"],
         "detected_breed": result["detected_breed"],
+        "prediction_label": result["prediction_label"],
+        "prediction_confidence": result["prediction_confidence"],
     }
 
     memory["fear_total"] = fear_total
@@ -208,10 +251,24 @@ def generate_reflection(memory):
     recent = experiences[-REFLECTION_WINDOW:]
     positives = sum(1 for item in recent if item.get("type") == "positive")
     negatives = sum(1 for item in recent if item.get("type") == "negative")
+    threatening_predictions = sum(
+        1 for item in recent if item.get("prediction_label") in {"aggressive", "threatening", "defensive"}
+    )
+    safe_predictions = sum(
+        1 for item in recent if item.get("prediction_label") in {"friendly", "playful", "calm"}
+    )
     fear_total = memory.get("fear_total", 0)
 
     if not experiences:
         return "Memory is empty. The system is waiting for experiences."
+    if safe_predictions > threatening_predictions and fear_total > 8:
+        return "Recent classified experiences suggest decreasing hostility patterns."
+    if threatening_predictions > safe_predictions and fear_total > 20:
+        return "Recent classified experiences reinforce high caution about dogs."
+    if safe_predictions > threatening_predictions:
+        return "Recent classifier patterns suggest safer dog interactions."
+    if threatening_predictions > safe_predictions:
+        return "Recent classifier patterns suggest increased defensive attention."
     if positives > negatives and fear_total > 8:
         return "Recent experiences contradict part of the previous belief state."
     if positives > negatives:
@@ -232,5 +289,6 @@ def generate_cognitive_summary(memory):
     return (
         f"Recorded experiences: {len(experiences)}\n"
         f"Negative: {negatives} | Positive: {positives} | Neutral: {neutrals}\n"
+        f"Latest ML label: {experiences[-1].get('prediction_label', 'none') if experiences else 'none'}\n"
         f"Reflection: {generate_reflection(memory)}"
     )

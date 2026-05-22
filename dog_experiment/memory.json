@@ -1,7 +1,7 @@
 {
-    "fear_total": 17.89,
-    "belief_confidence": 97.5,
-    "current_assessment": "There is moderate concern about dogs.",
+    "fear_total": 7.7,
+    "belief_confidence": 57.9,
+    "current_assessment": "Some dogs may represent risk.",
     "experiences": [
         {
             "text": "a dogs bite my leg",
@@ -96,6 +96,60 @@
             "detected_events": [],
             "detected_contexts": [],
             "detected_breed": "unknown"
+        },
+        {
+            "text": "today a dog play with me",
+            "impact": 0.0,
+            "rule_impact": 0.0,
+            "ml_impact": 0.0,
+            "resulting_fear": 17.53,
+            "type": "neutral",
+            "detected_events": [],
+            "detected_contexts": [],
+            "detected_breed": "unknown",
+            "prediction_label": "unavailable",
+            "prediction_confidence": 0.0
+        },
+        {
+            "text": "A dog play with me",
+            "impact": -1.89,
+            "rule_impact": 0.0,
+            "ml_impact": -1.89,
+            "resulting_fear": 15.29,
+            "type": "positive",
+            "detected_events": [],
+            "detected_contexts": [],
+            "detected_breed": "unknown",
+            "prediction_label": "playful",
+            "prediction_confidence": 0.4723
+        },
+        {
+            "text": "a dog run through my direction today and go away",
+            "impact": 1.85,
+            "rule_impact": 0.0,
+            "ml_impact": 1.85,
+            "resulting_fear": 16.83,
+            "type": "negative",
+            "detected_events": [],
+            "detected_contexts": [],
+            "detected_breed": "unknown",
+            "prediction_label": "aggressive",
+            "prediction_confidence": 0.308
+        },
+        {
+            "text": "today many street dogs played with me",
+            "impact": -8.79,
+            "rule_impact": -6.0,
+            "ml_impact": -2.79,
+            "resulting_fear": 7.7,
+            "type": "positive",
+            "detected_events": [
+                "played"
+            ],
+            "detected_contexts": [],
+            "detected_breed": "unknown",
+            "prediction_label": "playful",
+            "prediction_confidence": 0.6986
         }
     ]
 }
